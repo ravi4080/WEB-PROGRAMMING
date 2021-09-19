@@ -1,0 +1,84 @@
+header h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'sans-serif';  
+  font-size: 60px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+ }
+
+body {
+  background-color: #9efd38;
+  font-family: 'sans-serif', sans-serif;  
+}
+
+.game {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.vs {
+  text-align: center;
+  font-family: 'sans-serif', sans-serif;
+  font-size: 70px;
+  align-self: center;
+}
+
+.player, .computer {
+  width: 400px;
+  height: 300px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  color: #8b4513;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.player {
+  background-color: white;
+}
+
+.computer {
+  background-color: white;
+}
+
+.message {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 30px;
+  font-family: sans-serif;
+}
+
+.option {
+  display: flex;
+  font-size: 75px;
+  justify-content: space-between;
+  transition: 0.4s;
+}
+
+.player-rotate .fa-hand-rock:hover, .player-rotate .fa-hand-paper:hover, .player-rotate .fa-hand-scissors:hover {
+  text-shadow: 2px 2px 30px black;
+  cursor: pointer;
+}
+
+.score {
+  margin-bottom: 10px;
+  font-size: 30px;  
+}
+
+.text {
+  margin-top: 10px;
+  font-size: 30px;
+}
+
+#reset {
+
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+  margin-top: 20px;
+  padding: 5px 10px;
+}
