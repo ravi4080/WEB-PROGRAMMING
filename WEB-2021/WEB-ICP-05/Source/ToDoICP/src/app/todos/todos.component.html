@@ -1,0 +1,67 @@
+<div class="todos">
+    <div class="todos-container">
+        <div class="todo">
+            <h3>Make Your ToDo List Here...!!!</h3>
+            <div class="alert alert-danger" role="alert" *ngIf="showError">
+                {{errorMessage}}
+            </div>
+            <form>
+                <div class="form-group">
+                    <label for="taskName">Name of the Task</label>
+                    <input type="text" class="form-control" name="taskName" id="taskName" [(ngModel)]="taskName" placeholder="Task Name">
+                </div>
+                <div class="form-group">
+                    <label for="dueDate">Due Date</label>
+                    <input type="date" name="dueDate" class="form-control" id="dueDate" [(ngModel)]="dueDate" placeholder="Due Date">
+                </div>
+            </form>
+            <div class="btn">
+                <a href="#" class="btn btn-primary" (click)="addTaskToList()">{{editing ? 'Update Task' : 'Add Task'}}</a>
+            </div>
+
+            <div class="todos-list" *ngIf="todos.length > 0">
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-primary" [ngClass]="{'list-group-item-success': task.completed}" *ngFor="let task of todos;let i=index ">
+                        <div class="options">
+                            {{task.name}}
+                            <span class="badge badge-light badge-pill ">
+                              {{task.date | date : 'MMM d, y'}}
+                            </span>
+                            <div class="actions">
+                                <span class="timer"><i class="fas fa-stopwatch" *ngIf="!task.completed" (click)="selectTodo(task, i)"></i></span>
+                                <span class="delete "><i (click)="deleteTodo(i) " class="far fa-times-circle "></i></span>
+                            </div>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="countdown " *ngIf="showTimer ">
+        <div class="countdown-container ">
+            <h3>{{selectedTodo.name}}</h3>
+            <div class="due ">
+                <div class="days ">
+                    <p class="number ">{{selectedTodo.days}}</p>
+                    <span class="text ">Days</span>
+                </div>
+                <div class="hours ">
+                    <p class="number ">{{selectedTodo.hours}}</p>
+                    <span class="text ">Hours</span>
+                </div>
+                <div class="minutes ">
+                    <p class="number ">{{selectedTodo.minutes}}</p>
+                    <span class="text ">Minutes</span>
+                </div>
+                <div class="days ">
+                    <p class="number ">{{selectedTodo.seconds}}</p>
+                    <span class="text ">Seconds</span>
+                </div>
+            </div>
+            <div class="duedate ">
+                {{selectedTodo.date | date : 'MMM d, y'}}
+            </div>
+        </div>
+    </div>
+</div>

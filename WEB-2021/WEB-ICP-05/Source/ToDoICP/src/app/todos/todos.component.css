@@ -1,0 +1,81 @@
+.todos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+    margin: 0 auto;
+    width: 100%;
+    background: url('https://thumbs.dreamstime.com/b/writer-s-table-flat-lay-composition-student-desk-w-supplies-blank-notebook-pages-coffee-cup-clipboard-pencil-planner-to-do-list-109355198.jpg');
+    min-height: 87.5vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.todos-container {
+	
+    width: 50%;
+    padding: 30px;
+    border: 1px solid #ccc;
+    box-shadow: 0 3px 3px #ccc;
+    border-radius: 10px;
+    background: #721d1d;
+    color: white;
+}
+
+.countdown {
+    width: 35%;
+    text-align: center;
+    padding: 20px;
+    background: #721d1d;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 3px #ccc;
+}
+
+.todos-list {
+    margin-top: 50px;
+}
+
+.due {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.due .number {
+    font-size: 75px;
+    margin-bottom: 0;
+}
+
+.due .text {
+    font-size: 12px;
+    margin-top: -10px;
+}
+
+.list-group-item {
+    cursor: pointer;
+}
+
+.list-group-item .badge {
+    float: left;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.actions span {
+    margin-left: 20px;
+}
+
+.duedate {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+i {
+    cursor: pointer;
+}
